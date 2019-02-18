@@ -31,10 +31,15 @@ class Database
             echo $this->error;
         }
     }
-//prepara consulta
+    //prepara consulta
     public function query($sql)
     {
         $this->stmt =$this->dbh->prepare($sql) ;
+    }
+    //bind Param enlace consulta preparada con variable
+    public function bParam($campo, $param)
+    {
+        $this->stmt->bindParam($campo, $param);
     }
 //parametrisa consulta
     public function bind($param, $val, $type = null)

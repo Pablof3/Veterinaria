@@ -9,6 +9,8 @@ require_once 'config/configSystem.php';
 //AUTOLOAD PHP
 spl_autoload_register(function($nombreClase)
 {
-    //echo $nombreClase;
+    //carga clases de Lib
     require_once 'lib/' . $nombreClase . '.php';
+    //Craga clases de core
+    require_once 'core/'.$nombreClase.'.php';
 });

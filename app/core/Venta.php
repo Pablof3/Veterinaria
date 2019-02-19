@@ -1,9 +1,9 @@
 <?php
 class Venta
 {
-public $idVenta;
-public $idCliente;
-public $idUsuario;
-public $FechaVenta;
-public $Total;
+public $id_Venta;
+public $id_Cliente;
+public $id_Usuario;
+public $total;
+public $fechaRegistro;
 }

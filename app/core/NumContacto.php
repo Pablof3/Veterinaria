@@ -1,8 +1,9 @@
 <?php
 class NumContacto
 {
-    public $id_numPropietario;
+    public $id_NumContacto;
+    public $id_NumPropietario;
     public $numero;
-    public $descripcion;
-    public $id_numContacto;
+    public $tipo;
+    public $fechaRegistro;
 }

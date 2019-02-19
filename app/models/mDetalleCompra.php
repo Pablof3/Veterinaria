@@ -1,5 +1,5 @@
 <?php
-class DetalleCompra
+class mDetalleCompra
 {
     private $db;
     public function __construct() {

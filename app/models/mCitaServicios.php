@@ -1,5 +1,5 @@
 <?php
-class CitaServicio
+class mCitaServicio
 {
     private $db;
     public function __construct() {

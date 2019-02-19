@@ -1,5 +1,5 @@
 <?php
-class DetalleVenta
+class mDetalleVenta
 {
     private $db;
     public function __construct() {
@@ -22,7 +22,7 @@ class DetalleVenta
     public function Actualizar($DetalleVenta)
     {
         $query="UPDATE DetalleVenta
-                SET id_Venta=:id_Venta, id_Producto=:id_Producto, precio_Venta=:precioVenta cantidad=:cantidad, subtotal=:subtotal
+                SET id_Venta=:id_Venta, id_Producto=:id_Producto, precio_Venta=:precio_Venta cantidad=:cantidad, subtotal=:subtotal
                 WHERE id_DetalleVenta=:id_DetalleVenta";
         $this->db->query($query);
         $this->db->bParam(':id_Venta' , $DetalleVenta->id_Venta);

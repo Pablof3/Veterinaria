@@ -1,5 +1,5 @@
 <?php
-class Cliente 
+class mCliente 
 {
     private $db;
     public function __construct() {

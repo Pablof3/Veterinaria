@@ -1,5 +1,5 @@
 <?php
-class Consultorio
+class mConsultorio
 {
     private $db;
     public function __construct() {

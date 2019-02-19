@@ -1,9 +1,10 @@
 <?php
 class Proveedor
 {
+    public $id_Proveedor;
     public $empresa;
-    public $ci_Nit;
+    public $ci;
+    public $nit;
     public $encargado;
     public $fecha_Registro;
-    public $id_Proveedor;
 }

@@ -8,28 +8,28 @@ class mDireccion
 
     public function Insertar($Direccion)
     {
-        $query="INSERT INTO Direccion (id_Cita, Direccion, codigo, precio_Total, saldo) 
-                VALUES (:id_Cita, :Direccion, :codigo, :precio_Total, :saldo)";
+        $query="INSERT INTO Direccion (id_DireccionPropietario, descripcion, direccion, latitud, longitud) 
+                VALUES (:id_DireccionPropietario, :descripcion, :direccion, :latitud, :longitud)";
         $this->db->query($query);
-        $this->db->bParam(':id_Cita' , $Direccion->id_Cita);
-        $this->db->bParam(':Direccion', $Direccion->Direccion);
-        $this->db->bParam(':codigo', $Direccion->codigo);
-        $this->db->bParam(':precio_Total', $Direccion->precio_Total);
-        $this->db->bParam(':saldo', $Direccion->saldo);
+        $this->db->bParam(':id_DireccionPropietario' , $Direccion->id_DireccionPropietario);
+        $this->db->bParam(':descripcion', $Direccion->descripcion);
+        $this->db->bParam(':direccion', $Direccion->direccion);
+        $this->db->bParam(':latitud', $Direccion->latitud);
+        $this->db->bParam(':longitud', $Direccion->longitud);
         return $this->db->execute();
     }
 
     public function Actualizar($Direccion)
     {
         $query="UPDATE Direccion
-                SET id_Cita=:id_Cita, Direccion=:Direccion, codigo=:codigo precio_Total=:precio_Total, saldo=:saldo
+                SET id_DireccionPropietario=:id_DireccionPropietario, descripcion=:descripcion, direccion=:direccion latitud=:latitud, longitud=:longitud
                 WHERE id_Direccion=:id_Direccion";
         $this->db->query($query);
-        $this->db->bParam(':id_Cita' , $Direccion->id_Cita);
-        $this->db->bParam(':Direccion', $Direccion->Direccion);
-        $this->db->bParam(':codigo', $Direccion->codigo);
-        $this->db->bParam(':precio_Total', $Direccion->precio_Total);
-        $this->db->bParam(':saldo', $Direccion->saldo);
+        $this->db->bParam(':id_DireccionPropietario' , $Direccion->id_DireccionPropietario);
+        $this->db->bParam(':descripcion', $Direccion->descripcion);
+        $this->db->bParam(':direccion', $Direccion->direccion);
+        $this->db->bParam(':latitud', $Direccion->latitud);
+        $this->db->bParam(':longitud', $Direccion->longitud);
         $this->db->bParam(':id_Direccion', $Direccion->id_Direccion);
         return $this->db->execute();
     }

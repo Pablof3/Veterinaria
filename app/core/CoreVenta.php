@@ -1,9 +1,12 @@
 <?php
-class Venta
+namespace Core
 {
-public $id_Venta;
-public $id_Cliente;
-public $id_Usuario;
-public $total;
-public $fechaRegistro;
+    class Venta
+    {
+    public $id_Venta;
+    public $id_Cliente;
+    public $id_Usuario;
+    public $total;
+    public $fechaRegistro;
+    }
 }

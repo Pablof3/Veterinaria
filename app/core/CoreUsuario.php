@@ -1,9 +1,13 @@
 <?php
-class Usuario
+namespace Core
 {
-    public $id_Usuario;
-    public $username;
-    public $email;
-    public $password;
-    public $cargo;
+    class Usuario
+    {
+        public $id_Usuario;
+        public $username;
+        public $email;
+        public $password;
+        public $cargo;
+    }
 }
+?>

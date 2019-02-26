@@ -2,7 +2,6 @@
 require "../app/core/NamespaceCore.php";
 class Mascota extends Controller
 {
-    
     private $mMascota;
     public function __construct() {
         //$this->mMascota=$this->modelo('mMascota');
@@ -17,9 +16,9 @@ class Mascota extends Controller
         $mascota->peso=5.5;
         $mascota->raza='Mastin';
         print_r($mascota);
-        // // $this->mMascota->Insertar($mascota);
-        // // print_r($resp);
-        echo "hello";
+        //$this->mMascota->Insertar($mascota);
+        //print_r($resp);
+        //echo "hello";
         
     }
 }

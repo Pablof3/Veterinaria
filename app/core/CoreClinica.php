@@ -1,9 +1,12 @@
 <?php
-class Clinica
+namespace Core
 {
-    public $id_Clinica;
-    public $nombre_Clinica;
-    public $descripcion;
-    public $direccion;
-    public $fechaRegistro;
+    class Clinica
+    {
+        public $id_Clinica;
+        public $nombre_Clinica;
+        public $descripcion;
+        public $direccion;
+        public $fechaRegistro;
+    }
 }

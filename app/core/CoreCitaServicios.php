@@ -1,7 +1,11 @@
 <?php
-class CitaServicios
+namespace Core
 {
-    public $id_CitaServicios;
-    public $id_Cita;
-    public $id_Servicio;
+    class CitaServicios
+    
+    {
+        public $id_CitaServicios;
+        public $id_Cita;
+        public $id_Servicio;
+    }
 }

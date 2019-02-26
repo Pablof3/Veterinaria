@@ -1,9 +1,13 @@
 <?php
-class Consultorio
+namespace Core
 {
-    public $id_Consultorio;
-    public $id_Clinica;
-    public $nombre;
-    public $descripcion;
-    public $fechaRegistro;
+
+    class Consultorio
+    {
+        public $id_Consultorio;
+        public $id_Clinica;
+        public $nombre;
+        public $descripcion;
+        public $fechaRegistro;
+    }
 }

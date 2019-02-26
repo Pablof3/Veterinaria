@@ -7,16 +7,22 @@ class mMascota
     }
     public function Insertar($mascota)
     {
-        $query="INSERT INTO Mascota(id_Cliente, nombre_Mascota, tipo_Mascota, edad, peso, raza) 
-                VALUES(:id_Cliente, :nombre_Mascota, :tipo_Mascota, :edad, :peso, :raza)";
-        $this->db->query($query);
-        $this->db->bParam(':id_Cliente',$mascota->id_Cliente);
-        $this->db->bParam(':nombre_Mascota',$mascota->nombre_Mascota);
-        $this->db->bParam(':tipo_Mascota',$mascota->tipo_Mascota);
-        $this->db->bParam(':edad',$mascota->edad);
-        $this->db->bParam(':peso',$mascota->peso);
-        $this->db->bParam(':raza',$mascota->raza);
-        return $this->db->execute();
+        // $query="INSERT INTO Mascota(id_Cliente, nombre_Mascota, tipo_Mascota, edad, peso, raza) 
+        //         VALUES(:id_Cliente, :nombre_Mascota, :tipo_Mascota, :edad, :peso, :raza)";
+        // $this->db->query($query);
+        // $this->db->stmt->bindParam(':id_Cliente',$mascota->id_Cliente);
+        // $this->db->stmt->bindParam(':nombre_Mascota',$mascota->nombre_Mascota);
+        // $this->db->stmt->bindParam(':tipo_Mascota',$mascota->tipo_Mascota);
+        // $this->db->stmt->bindParam(':edad',$mascota->edad);
+        // $this->db->stmt->bindParam(':peso',$mascota->peso);
+        // $this->db->stmt->bindParam(':raza',$mascota->raza);
+        // // $this->db->bParam(':id_Cliente',$mascota->id_Cliente);
+        // // $this->db->bParam(':nombre_Mascota',$mascota->nombre_Mascota);
+        // // $this->db->bParam(':tipo_Mascota',$mascota->tipo_Mascota);
+        // // $this->db->bParam(':edad',$mascota->edad);
+        // // $this->db->bParam(':peso',$mascota->peso);
+        // // $this->db->bParam(':raza',$mascota->raza);
+        // return $this->db->execute();
     }
     public function Actualizar($mascota)
     {

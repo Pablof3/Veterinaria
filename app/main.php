@@ -11,6 +11,10 @@ spl_autoload_register(function($nombreClase)
 {
     //carga clases de Lib
     require_once 'lib/' . $nombreClase . '.php';
-    //Craga clases de core
-    require_once 'core/'.$nombreClase.'.php';
+    
 });
+// spl_autoload_register(function ($nombre)
+// {
+//     //Craga clases de core
+//     require_once 'core/'.$nombre.'.php';
+// });

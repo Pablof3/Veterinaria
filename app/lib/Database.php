@@ -8,7 +8,7 @@ class Database
     private $name_db = DB_NAME_BD;
 
     private $dbh;
-    private $stmt;
+    public $stmt;
     private $error;
 
     public function __construct() 

@@ -1,8 +1,11 @@
 <?php
-class PaqueteServicio
+namespace Core
 {
-    public $id_PaqueteServicio;
-    public $id_Paquete;
-    public $id_Servicio;
-
+    class PaqueteServicio
+    {
+        public $id_PaqueteServicio;
+        public $id_Paquete;
+        public $id_Servicio;
+    
+    }
 }

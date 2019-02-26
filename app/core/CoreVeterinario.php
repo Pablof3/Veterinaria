@@ -1,9 +1,12 @@
 <?php
-class Veterinario
+namespace Core
 {
-    public $id_Veterinario;    
-    public $nombre;    
-    public $apellido;       
-    public $especialidad;    
-    public $fechaRegistro;    
+    class Veterinario
+    {
+        public $id_Veterinario;    
+        public $nombre;    
+        public $apellido;       
+        public $especialidad;    
+        public $fechaRegistro;    
+    }
 }

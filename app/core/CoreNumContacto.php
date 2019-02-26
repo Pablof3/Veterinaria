@@ -1,9 +1,12 @@
 <?php
-class NumContacto
+namespace Core
 {
-    public $id_NumContacto;
-    public $id_NumPropietario;
-    public $numero;
-    public $tipo;
-    public $fechaRegistro;
+    class NumContacto
+    {
+        public $id_NumContacto;
+        public $id_NumPropietario;
+        public $numero;
+        public $tipo;
+        public $fechaRegistro;
+    }
 }

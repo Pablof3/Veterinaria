@@ -1,8 +1,11 @@
 <?php
-class TipoContacto
+namespace Core
 {
-    public $id_TipoContacto;
-    public $nombre;
+    class TipoContacto
+    {
+        public $id_TipoContacto;
+        public $nombre;
+    }
 }
 
 ?>

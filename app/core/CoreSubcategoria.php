@@ -1,9 +1,12 @@
 <?php
-class Subcategoria
+namespace Core
 {
-    public $id_Subcategoria;
-    public $id_Categoria;
-    public $nombre;
-    public $fechaRegistro;
+    class Subcategoria
+    {
+        public $id_Subcategoria;
+        public $id_Categoria;
+        public $nombre;
+        public $fechaRegistro;
+    }
 }
 ?>

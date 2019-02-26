@@ -30,6 +30,7 @@ class mMascota
         $this->db->bParam(':edad',$mascota->edad);
         $this->db->bParam(':peso',$mascota->peso);
         $this->db->bParam(':raza',$mascota->raza);
+        $this->db->bParam(':id_Mascota',$mascota->id_Mascota);
         return $this->db->execute();
     }
     public function Eliminar($id)

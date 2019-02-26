@@ -9,14 +9,31 @@ class Mascota extends Controller
     public function Registrar()
     {
         $mascota=new Core\Mascota;
+        //$mascota->id_Mascota=1;
         $mascota->id_Cliente=1;
-        $mascota->nombre_Mascota='Batuke';
-        $mascota->tipo_Mascota='perro';
-        $mascota->edad=3;
-        $mascota->peso=5.5;
-        $mascota->raza='Mastin';
-        print_r($mascota);
-        $this->mMascota->Insertar($mascota);        
+        $mascota->nombre_Mascota='Charlie';
+        $mascota->tipo_Mascota='Perro';
+        $mascota->edad=4;
+        $mascota->peso=3;
+        $mascota->raza='Boxer';
+        $this->mMascota->Insertar($mascota);  
+    }
+    public function Actualizar()
+    {
+        $mascota=new Core\Mascota;
+        $mascota->id_Mascota=2;
+        $mascota->id_Cliente=1;
+        $mascota->nombre_Mascota='Charlie';
+        $mascota->tipo_Mascota='gato';
+        $mascota->edad=4;
+        $mascota->peso=3;
+        $mascota->raza='Persa';
+        $this->mMascota->Actualizar($mascota);  
+    }
+    public function Eliminar()
+    {
+     
+        $this->mMascota->Eliminar(2);  
     }
 }
 

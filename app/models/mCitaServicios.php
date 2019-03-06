@@ -32,7 +32,7 @@ class mCitaServicio
     {
         $query="DELETE FROM CitaServicios
                 WHERE id_CitaServicios=:id_CitaServicios";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_CitaServicios',$id);
         return $this->db->execute();
     }

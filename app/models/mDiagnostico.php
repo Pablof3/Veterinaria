@@ -38,7 +38,7 @@ class mDiagnostico
     {
         $query="DELETE FROM Diagnostico
                 WHERE id_Diagnostico=:id_Diagnostico";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_Diagnostico',$id);
         return $this->db->execute();
     } 

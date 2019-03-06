@@ -36,7 +36,7 @@ class mCita
     {
         $query="DELETE FROM Cita
                 WHERE id_Cita=:id_Cita";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_Cita',$id);
         return $this->db->execute();
     }

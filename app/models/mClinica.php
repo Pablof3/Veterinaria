@@ -34,7 +34,7 @@ class mClinica
     {
         $query="DELETE FROM Clinica
                 WHERE id_Clinica=:id_Clinica";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_Clinica',$id);
         return $this->db->execute();
     } 

@@ -1,5 +1,6 @@
 <?php
 require "../app/core/CoreCargo.php";
+require "../app/core/CoreCategoria.php";
 require "../app/core/CoreCita.php";
 require "../app/core/CoreCitaServicios.php";
 require "../app/core/CoreCliente.php";

@@ -38,7 +38,7 @@ class mDetalleVenta
     {
         $query="DELETE FROM DetalleVenta
                 WHERE id_DetalleVenta=:id_DetalleVenta";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_DetalleVenta',$id);
         return $this->db->execute();
     } 

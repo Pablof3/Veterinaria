@@ -31,7 +31,7 @@ class mCategoria
     {
         $query="DELETE FROM Categoria 
                 WHERE id_Categoria=:id_Categoria";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_Categoria',$id);
         return $this->db->execute();
     }

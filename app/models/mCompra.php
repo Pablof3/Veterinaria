@@ -34,7 +34,7 @@ class mCompra
     {
         $query="DELETE FROM Compra
                 WHERE id_Compra=:id_Compra";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_Compra',$id);
         return $this->db->execute();
     } 

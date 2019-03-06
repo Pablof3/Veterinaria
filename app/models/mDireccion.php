@@ -38,7 +38,7 @@ class mDireccion
     {
         $query="DELETE FROM Direccion
                 WHERE id_Direccion=:id_Direccion";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_Direccion',$id);
         return $this->db->execute();
     } 

@@ -34,7 +34,7 @@ class mConsultorio
     {
         $query="DELETE FROM Consultorio
                 WHERE id_Consultorio=:id_Consultorio";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_Consultorio',$id);
         return $this->db->execute();
     } 

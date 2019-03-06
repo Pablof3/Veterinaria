@@ -36,7 +36,7 @@ class mCliente
     {
         $query="DELETE FROM Cliente
                 WHERE id_Cliente=:id_Cliente";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_Cliente',$id);
         return $this->db->execute();
     } 

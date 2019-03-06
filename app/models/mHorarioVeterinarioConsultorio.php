@@ -36,7 +36,7 @@ class mHorarioVeterinarioConsultorio
     {
         $query="DELETE FROM HorarioVeterinarioConsultorio
                 WHERE id_HorarioVeterinarioConsultorio=:id_HorarioVeterinarioConsultorio";
-        $this->db->bParam($query);
+        $this->db->query($query);
         $this->db->bParam(':id_HorarioVeterinarioConsultorio',$id);
         return $this->db->execute();
     } 

@@ -17,7 +17,7 @@ class Database
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->name_db.';port='.$this->port;
 
         $options = array(
-            PDO::ATTR_PERSISTENT => true ,
+            PDO::ATTR_PERSISTENT => false,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
          );
     

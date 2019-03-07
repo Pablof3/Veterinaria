@@ -7,7 +7,7 @@ class Database
     private $password = DB_PASSWORD;
     private $name_db = DB_NAME_BD;
 
-    private $dbh;
+    public $dbh;
     public $stmt;
     private $error;
 
@@ -31,12 +31,20 @@ class Database
             echo $this->error;
         }
     }
-    //prepara consulta
+    /**
+     * Prepara consulta para ser ejecutada posteriormente
+     */
     public function query($sql)
     {
         $this->stmt =$this->dbh->prepare($sql) ;
     }
-    //bind Param enlace consulta preparada con variable
+    /**
+     * Enlaza consulta preparada con variable(bind Param)
+     * 
+     * @param string $campo nombre de columna bd
+     * @param string $param valor a asignar
+     */
+
     public function bParam($campo, $param)
     {
         $this->stmt->bindParam($campo, $param);
@@ -64,7 +72,9 @@ class Database
         }
         $this->stmt->bindValue($param, $val, $type);
     }
-//ejecuta consulta
+    /**
+     * Ejecuta la Consulta Preparada
+     */
     public function execute()
     {
         return $this->stmt->execute();
@@ -87,7 +97,35 @@ class Database
         return $this->stmt->rowCount();
 
     }
+    /**
+     * Retorna ultimo id Autogenerado de la ultima consulta
+     * @return Id
+     **/
+    public function lastInsertId()
+    {
+        return $this->dbh->lastInsertId();
+    }
     
+    /**
+     * Inicia Transaccion
+     **/
+    public function beginTransaction()
+    {
+        $this->dbh->beginTransaction();
+    } 
+    public function commit()
+    {
+        $this->dbh->commit();
+    }
+    /**
+     * Restablece la Transaccion
+     */
+    public function rollback()
+    {
+        $this->dbh->rollback();
+    }
+
+     
 }
 
 ?>

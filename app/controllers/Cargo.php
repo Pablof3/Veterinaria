@@ -25,6 +25,6 @@ class Cargo extends Controller
     }
     public function Eliminar()
     {
-       print_r( $this->mCargo->Eliminar(1));  
+       print_r( $this->mCargo->Eliminar());  
     }
 }

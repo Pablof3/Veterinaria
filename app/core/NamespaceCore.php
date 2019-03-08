@@ -7,6 +7,7 @@ require "../app/core/CoreCliente.php";
 require "../app/core/CoreClinica.php";
 require "../app/core/CoreCompra.php";
 require "../app/core/CoreConsultorio.php";
+require "../app/core/CoreDetalleCompra.php";
 require "../app/core/CoreDetalleVenta.php";
 require "../app/core/CoreDiagnostico.php";
 require "../app/core/CoreDireccion.php";

@@ -15,6 +15,7 @@ class Paquete extends Controller
         $paquete->nombre='Premium Dog';
         $paquete->precio=40.50;
         $paquete->descripcion='Paquete especializado en el control total de los Perros';
+        
         $paquete->idServicios=[0=>1,1=>2,2=>3];
         $this->mPaquete->Insertar($paquete);
     }

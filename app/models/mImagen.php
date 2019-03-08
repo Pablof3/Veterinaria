@@ -18,7 +18,7 @@ class mImagen
     public function Actualizar($Imagen)
     {
         $query="UPDATE Imagen 
-                SET id_Propietario=:id_Propietario 
+                SET id_Propietario=:id_Propietario, path=:path
                 WHERE id_Imagen=:id_Imagen";
         $this->db->query($query);
         $this->db->bParam(':id_Propietario',$Imagen->id_Propietario);

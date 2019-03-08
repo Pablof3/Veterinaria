@@ -31,7 +31,7 @@ class HorarioVeterinarioConsultorio extends Controller
     public function Eliminar()
     {
      
-        $this->mHorarioVeterinarioConsultorio->Eliminar(1);  
+        $this->mHorarioVeterinarioConsultorio->Eliminar();  
     }
 }
 

@@ -5,7 +5,7 @@ class Controller
     //cargar modelp
     public function modelo($modelo)
     {
-        require "../app/models/" . $modelo . ".php";
+        require "../app/models/".$modelo.".php";
         //Instancia de modelo
         return new $modelo();
     }

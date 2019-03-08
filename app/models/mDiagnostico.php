@@ -22,7 +22,7 @@ class mDiagnostico
     public function Actualizar($Diagnostico)
     {
         $query="UPDATE Diagnostico
-                SET id_Cita=:id_Cita, diagnostico=:diagnostico, codigo=:codigo precio_Total=:precio_Total, saldo=:saldo
+                SET id_Cita=:id_Cita, diagnostico=:diagnostico, codigo=:codigo, precio_Total=:precio_Total, saldo=:saldo
                 WHERE id_Diagnostico=:id_Diagnostico";
         $this->db->query($query);
         $this->db->bParam(':id_Cita' , $Diagnostico->id_Cita);

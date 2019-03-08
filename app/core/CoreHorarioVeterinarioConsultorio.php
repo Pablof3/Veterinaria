@@ -3,7 +3,7 @@ namespace Core{
 
     class HorarioVeterinarioConsultorio
     {
-        public $id_HorarioVetCons;
+        public $id_HorarioVetCon;
         public $id_Consultorio;
         public $id_Veterinario;
         public $horario_Inicio;

@@ -22,7 +22,7 @@ class mDireccion
     public function Actualizar($Direccion)
     {
         $query="UPDATE Direccion
-                SET id_DireccionPropietario=:id_DireccionPropietario, descripcion=:descripcion, direccion=:direccion latitud=:latitud, longitud=:longitud
+                SET id_DireccionPropietario=:id_DireccionPropietario, descripcion=:descripcion, direccion=:direccion, latitud=:latitud, longitud=:longitud
                 WHERE id_Direccion=:id_Direccion";
         $this->db->query($query);
         $this->db->bParam(':id_DireccionPropietario' , $Direccion->id_DireccionPropietario);

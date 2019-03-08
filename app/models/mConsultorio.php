@@ -23,7 +23,7 @@ class mConsultorio
                 SET id_Clinica=:id_Clinica, nombre=:nombre, descripcion=:descripcion
                 WHERE id_Consultorio=:id_Consultorio";
         $this->db->query($query);
-        $this->db->bParam(':id_Clinicar' , $Consultorio->id_Clinica);
+        $this->db->bParam(':id_Clinica' , $Consultorio->id_Clinica);
         $this->db->bParam(':nombre', $Consultorio->nombre);
         $this->db->bParam(':descripcion' , $Consultorio->descripcion);
         $this->db->bParam(':id_Consultorio' , $Consultorio->id_Consultorio);

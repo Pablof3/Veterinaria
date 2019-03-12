@@ -10,14 +10,14 @@ define('DB_PASSWORD','solidev');       //contraseña de usuario de base de datos
 define('DB_NAME_BD','solidevt_veterinaria_bd');   //nombre de base de datos
 
 //Configuracion CONTROLADOR y METODO [DEFAULT]
-define('CONTROLLER','pController');   //Controller
+define('CONTROLLER','Dashboard');   //Controller
 define('METHOD','index');           //Method
 
 //Ruta App
 define('RUTA_APP', dirname(dirname(__FILE__)));
 
 //URL
-define('RUTA_URL', 'http://localhost/Veterinaria'); //Cambiar a Nombre de Proyecto
+define('RUTA_URL', 'http://'.$_SERVER['HTTP_HOST'].'/Veterinaria'); //Cambiar a Nombre de Proyecto
 
 
 ?>

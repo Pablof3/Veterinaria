@@ -44,7 +44,7 @@ function loadStyle(href, callback) {
 
   $(".theme-color[data-theme='" + theme + "']").addClass("active");
 
-  loadStyle("css/" + theme, onStyleComplete);
+  loadStyle("http://"+window.location.host+"/Veterinaria/css/" + theme, onStyleComplete);
   function onStyleComplete() {
     setTimeout(onStyleCompleteDelayed, 300);
   }

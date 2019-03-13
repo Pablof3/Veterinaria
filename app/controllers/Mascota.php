@@ -35,6 +35,11 @@ class Mascota extends Controller
      
         $this->mMascota->Eliminar(2);  
     }
+
+    public function vRegistrar()
+    {
+        $this->vista('Mascota/vRegistrar');
+    }
 }
 
 ?>

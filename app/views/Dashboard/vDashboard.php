@@ -19,7 +19,7 @@
 </div>
 
 <?php foreach ($_SERVER as  $key=>$value):?>
-<?php print_r($key.' =>'.$value);?>
+<?php print_r($key);?>
 <br>
 <?php endforeach;?>
 <?php require RUTA_APP .'/views/inc/Footer.php';?>

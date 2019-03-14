@@ -31,6 +31,11 @@ class Cliente extends Controller
      
         $this->mCliente->Eliminar();  
     }
+
+    public function vRegistrar()
+    {
+        $this->vista('Cliente/vRegistrar');
+    }
 }
 
 ?>

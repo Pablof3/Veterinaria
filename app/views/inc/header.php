@@ -112,7 +112,7 @@
 
                         <div class="d-flex flex-row mb-3 pb-3 border-bottom">
                             <a href="#">
-                                <img src="img/profile-pic-l-2.jpg" alt="Notification Image" class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
+                                <img src="<?= RUTA_URL?>/img/profile-pic-l-2.jpg" alt="Notification Image" class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
                             </a>
                             <div class="pl-3 pr-2">
                                 <a href="#">
@@ -124,7 +124,7 @@
 
                         <div class="d-flex flex-row mb-3 pb-3 border-bottom">
                             <a href="#">
-                                <img src="img/notification-thumb.jpg" alt="Notification Image" class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
+                                <img src="<?= RUTA_URL?>/img/notification-thumb.jpg" alt="Notification Image" class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
                             </a>
                             <div class="pl-3 pr-2">
                                 <a href="#">
@@ -137,7 +137,7 @@
 
                         <div class="d-flex flex-row mb-3 pb-3 border-bottom">
                             <a href="#">
-                                <img src="img/notification-thumb-2.jpg" alt="Notification Image" class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
+                                <img src="<?= RUTA_URL?>/img/notification-thumb-2.jpg" alt="Notification Image" class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
                             </a>
                             <div class="pl-3 pr-2">
                                 <a href="#">
@@ -149,7 +149,7 @@
 
                         <div class="d-flex flex-row mb-3 pb-3 ">
                             <a href="#">
-                                <img src="img/notification-thumb-3.jpg" alt="Notification Image" class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
+                                <img src="<?= RUTA_URL?>/img/notification-thumb-3.jpg" alt="Notification Image" class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
                             </a>
                             <div class="pl-3 pr-2">
                                 <a href="#">
@@ -174,7 +174,7 @@
                     aria-expanded="false">
                     <span class="name">Sarah Kortney</span>
                     <span>
-                        <img alt="Profile Picture" src="img/profile-pic-l.jpg" />
+                        <img alt="Profile Picture" src="<?= RUTA_URL?>/img/profile-pic-l.jpg" />
                     </span>
                 </button>
 

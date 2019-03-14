@@ -9,7 +9,7 @@ class Mascota extends Controller
     public function Registrar()
     {
         $mascota=new Core\Mascota;
-        //$mascota->id_Mascota=1;
+        $mascota->id_Mascota=1;
         $mascota->id_Cliente=1;
         $mascota->nombre_Mascota='Charlie';
         $mascota->tipo_Mascota='Perro';

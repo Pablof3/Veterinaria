@@ -31,6 +31,7 @@ class mPaquete
             $this->db->commit();
             
         } catch (Exception $e) {
+            
             print_r($e);
         }
     }

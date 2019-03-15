@@ -1,4 +1,5 @@
 <?php require RUTA_APP .'/views/inc/Header.php';?>
+<?php echo $data['saludo'];?>
 <div class=" card mb-4">
     <div class="card-body">
         <h5 class="mb-3">Registro Cliente</h5>
@@ -42,47 +43,55 @@
             <h6>
                 Direccion
             </h6>
-            <div class="form-row mb-3">
-                <div class="col-md-2">
-                    <label for="">Descripcion</label>
-                    <input type="text"
-                            class="form-control"
-                            placeholder="Descripcion"
-                            name="Cliente[Direcciones][0][descripcion]" required>
-                    <div class="invalid-tooltip">
-                        Aviso
+            <div id="ClienteDirecciones">
+                <div class="form-row mb-3">
+                    <div class="col-md-2">
+                        <label for="">Descripcion</label>
+                        <input type="text"
+                                class="form-control"
+                                placeholder="Descripcion"
+                                name="Cliente[Direcciones][0][descripcion]" required>
+                        <div class="invalid-tooltip">
+                            Aviso
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Direccion</label>
+                        <input type="text"
+                                class="form-control"
+                                placeholder="Direccion"
+                                name="Cliente[Direcciones][0][direccion]" required>
+                        <div class="invalid-tooltip">
+                            Aviso
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Latitud</label>
+                        <input type="text"
+                                class="form-control"
+                                placeholder="Latitud"
+                                name="Cliente[Direcciones][0][latitud]" required>
+                        <div class="invalid-tooltip">
+                            Aviso
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Longitud</label>
+                        <input type="text"
+                                class="form-control"
+                                placeholder="Longitud"
+                                name="Cliente[Direcciones][0][longitud]" required>
+                        <div class="invalid-tooltip">
+                            Aviso
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <label for="">Direccion</label>
-                    <input type="text"
-                            class="form-control"
-                            placeholder="Direccion"
-                            name="Cliente[Direcciones][0][direccion]" required>
-                    <div class="invalid-tooltip">
-                        Aviso
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <label for="">Latitud</label>
-                    <input type="text"
-                            class="form-control"
-                            placeholder="Latitud"
-                            name="Cliente[Direcciones][0][latitud]" required>
-                    <div class="invalid-tooltip">
-                        Aviso
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <label for="">Longitud</label>
-                    <input type="text"
-                            class="form-control"
-                            placeholder="Longitud"
-                            name="Cliente[Direcciones][0][longitud]" required>
-                    <div class="invalid-tooltip">
-                        Aviso
-                    </div>
-                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="button" 
+                        class="btn btn-primary btn-lg mb-1 mx-auto"
+                        onclick="AgregarCamposDireccion()">Agregar Direccion</button>
             </div>
             <button class="btn btn-primary" type="submit">
                 Registrar
@@ -91,3 +100,7 @@
     </div>
 </div>
 <?php require RUTA_APP .'/views/inc/Footer.php';?>
+<?php
+    $libs=[0=>'Cliente'];
+    InsertLib($libs);
+?>

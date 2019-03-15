@@ -9,11 +9,7 @@ class Cliente extends Controller
     }
     public function Registrar()
     {
-        $cliente=new Core\Cliente;
-        $cliente->nombre='Mauricio';
-        $cliente->apellido='Gamarra Vargas';
-        $cliente->ci='7938252';
-        $cliente->nit='7938252456';
+        $cliente=(object)$_POST['Cliente'];
         $this->mCliente->Insertar($cliente);  
     }
     public function Actualizar()
@@ -34,7 +30,8 @@ class Cliente extends Controller
 
     public function vRegistrar()
     {
-        $this->vista('Cliente/vRegistrar');
+        $data=['saludo'=>'Soy Cliente'];
+        $this->vista('Cliente/vRegistrar', $data);
     }
 }
 

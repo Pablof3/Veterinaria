@@ -15,6 +15,7 @@ class mCliente
         $this->db->bParam(':apellido', $Cliente->apellido);
         $this->db->bParam(':ci' , $Cliente->ci);
         $this->db->bParam(':nit' , $Cliente->nit);
+        
         return $this->db->execute();
     }
 

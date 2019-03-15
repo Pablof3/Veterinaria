@@ -18,5 +18,13 @@
     <script src="<?= RUTA_URL;?>/js/vendor/mousetrap.min.js"></script>
     <script src="<?= RUTA_URL;?>/js/dore.script.js"></script>
     <script src="<?= RUTA_URL;?>/js/scripts.js"></script>
+    <?php
+         function InsertLib($libs)
+         {
+            foreach ($libs as $lib) {
+                echo '<script src='. RUTA_URL."/js/Veterinaria/".$lib.".js></script>";
+            }
+         }
+    ?>
     </body>
 </html>

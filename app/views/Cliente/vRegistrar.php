@@ -44,7 +44,7 @@
                 Direccion
             </h6>
             <div id="ClienteDirecciones">
-                <div class="form-row mb-3">
+                <div class="form-row mb-3 animated bounce1 " id="dir0">
                     <div class="col-md-2">
                         <label for="">Descripcion</label>
                         <input type="text"
@@ -55,7 +55,7 @@
                             Aviso
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <label for="">Direccion</label>
                         <input type="text"
                                 class="form-control"
@@ -85,13 +85,48 @@
                             Aviso
                         </div>
                     </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-danger mt-4" onclick="EliminarCamposDireccion(0)">Eliminar</button>
+                    </div>
+                    <hr>
                 </div>
             </div>
-
             <div class="form-row">
                 <button type="button" 
                         class="btn btn-primary btn-lg mb-1 mx-auto"
                         onclick="AgregarCamposDireccion()">Agregar Direccion</button>
+            </div>
+            <h6>Telefono</h6>
+            <div id="ClienteTelefonos">
+                <div class="form-row mb-3" id="tel0">
+                    <div class="col-md-4">
+                        <label for="">Numero Contacto</label>
+                        <input type="text" class="form-control" placeholder="Numero Contacto"
+                            name="Cliente[Telefonos][0][numero]" required>
+                        <div class="invalid-tooltip">
+                            Aviso
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Tipo</label>
+                        <input type="text" class="form-control" placeholder="Tipo" 
+                                name="Cliente[Telefonos][0][tipo]"
+                            required>
+                        <div class="invalid-tooltip">
+                            Aviso
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-danger mt-4" onclick="EliminarCamposTelefono(0)">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <button type="button" 
+                        class="btn btn-primary btn-lg mb-1 mx-auto"
+                        onclick="AgregarCamposTelefono()">Agregar Telefono</button>
             </div>
             <button class="btn btn-primary" type="submit">
                 Registrar

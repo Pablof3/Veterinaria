@@ -3139,6 +3139,11 @@ $.dore = function(element, options) {
           if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
+            console.log(form);
+          }
+          if(form.checkValidity()=== true)
+          {
+            alert('correcto');
           }
           form.classList.add("was-validated");
         },

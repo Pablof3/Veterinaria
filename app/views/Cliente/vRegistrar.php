@@ -12,6 +12,9 @@
                     <div class="valid-tooltip">
                         Looks good!
                     </div>
+                    <div class="invalid-tooltip">
+                        Campo Requerido
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationTooltip002">Apellido</label>
@@ -26,15 +29,16 @@
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip003">Ci</label>
                     <input type="text" class="form-control" id="validationTooltip003" placeholder="Ci"
-                        name="Cliente[ci]" required>
+                        name="Cliente[ci]" pattern="[0-9]*" maxlength="10" required>
                     <div class="invalid-tooltip">
-                        Please provide a city.
+                        Requerido <br>
+                        Numeros Max 10
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip004">Nit</label>
                     <input type="text" class="form-control" id="validationTooltip004" placeholder="Nit"
-                        name="Cliente[nit]" required>
+                        name="Cliente[nit]" pattern="[0-9]*" required>
                     <div class="invalid-tooltip">
                         Please provide a state.
                     </div>

@@ -5,12 +5,12 @@ class Cliente extends Controller
     private $mCliente;
     public function __construct() 
     {
-       $this->mCliente=$this->modelo('mCliente');
+      // $this->mCliente=$this->modelo('mCliente');
     }
     public function Registrar()
     {
         $cliente=(object)$_POST['Cliente'];
-        $this->mCliente->Insertar($cliente);  
+        //$this->mCliente->Insertar($cliente);  
     }
     public function Actualizar()
     {

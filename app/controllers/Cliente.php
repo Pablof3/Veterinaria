@@ -10,6 +10,7 @@ class Cliente extends Controller
     public function Registrar()
     {
         $cliente=(object)$_POST['Cliente'];
+        
         //$this->mCliente->Insertar($cliente);  
     }
     public function Actualizar()

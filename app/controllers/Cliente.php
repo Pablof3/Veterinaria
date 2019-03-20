@@ -9,7 +9,14 @@ class Cliente extends Controller
     }
     public function Registrar()
     {
-        $cliente=(object)$_POST['Cliente'];
+
+        $_POST['Cliente'];
+        foreach ($_POST['Cliente'] as $campo) {
+           
+            var_dump(trim($campo));
+            print_r($campo);
+            echo'<br>';
+        }
         
         //$this->mCliente->Insertar($cliente);  
     }
@@ -31,8 +38,7 @@ class Cliente extends Controller
 
     public function vRegistrar()
     {
-        $data=['saludo'=>'Soy Cliente'];
-        $this->vista('Cliente/vRegistrar', $data);
+        $this->vista('Cliente/vRegistrar');
     }
 }
 

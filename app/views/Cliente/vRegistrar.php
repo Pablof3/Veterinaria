@@ -1,5 +1,4 @@
 <?php require RUTA_APP .'/views/inc/Header.php';?>
-<?php echo $data['saludo'];?>
 <div class=" card mb-4">
     <div class="card-body">
         <h5 class="mb-3">Registro Cliente</h5>
@@ -7,21 +6,25 @@
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <label for="validationTooltip001">Nombre</label>
-                    <input type="text" class="form-control" id="validationTooltip001" placeholder="nombre"
-                        name="Cliente[nombre]" required>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
+                    <input type="text" class="form-control" 
+                        id="validationTooltip001" 
+                        placeholder="nombre"
+                        name="Cliente[nombre]" 
+                        maxlength="30" 
+                        required>
                     <div class="invalid-tooltip">
                         Campo Requerido
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationTooltip002">Apellido</label>
-                    <input type="text" class="form-control" id="validationTooltip002" placeholder="Apellido"
-                        name="Cliente[apellido]" required>
-                    <div class="valid-tooltip">
-                        Looks good!
+                    <input type="text" 
+                        class="form-control" id="validationTooltip002" placeholder="Apellido"
+                        name="Cliente[apellido]"
+                        maxlength="30"
+                        required>
+                    <div class="invalid-tooltip">
+                        Campo Requerido
                     </div>
                 </div>
             </div>
@@ -29,18 +32,22 @@
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip003">Ci</label>
                     <input type="text" class="form-control" id="validationTooltip003" placeholder="Ci"
-                        name="Cliente[ci]" pattern="[0-9]*" maxlength="10" required>
+                        name="Cliente[ci]" 
+                        pattern="[0-9]*" 
+                        maxlength="10" required>
                     <div class="invalid-tooltip">
                         Requerido <br>
-                        Numeros Max 10
+                        Solo Numeros
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip004">Nit</label>
                     <input type="text" class="form-control" id="validationTooltip004" placeholder="Nit"
-                        name="Cliente[nit]" pattern="[0-9]*" required>
+                        name="Cliente[nit]" 
+                        maxlength="15" 
+                        pattern="[0-9]*">
                     <div class="invalid-tooltip">
-                        Please provide a state.
+                        Solo Numeros
                     </div>
                 </div>
             </div>
@@ -48,15 +55,16 @@
                 Direccion
             </h6>
             <div id="ClienteDirecciones">
-                <div class="form-row mb-3 animated bounce1 " id="dir0">
+                <div class="form-row mb-3" id="dir0">
                     <div class="col-md-2">
                         <label for="">Descripcion</label>
                         <input type="text"
                                 class="form-control"
                                 placeholder="Descripcion"
-                                name="Cliente[Direcciones][0][descripcion]" required>
+                                name="Cliente[Direcciones][0][descripcion]" 
+                                maxlength="30" required>
                         <div class="invalid-tooltip">
-                            Aviso
+                            Campo Requerido
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -64,9 +72,11 @@
                         <input type="text"
                                 class="form-control"
                                 placeholder="Direccion"
-                                name="Cliente[Direcciones][0][direccion]" required>
+                                name="Cliente[Direcciones][0][direccion]"
+                                maxlength="150" 
+                                required>
                         <div class="invalid-tooltip">
-                            Aviso
+                            Campo Requerido
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -74,7 +84,9 @@
                         <input type="text"
                                 class="form-control"
                                 placeholder="Latitud"
-                                name="Cliente[Direcciones][0][latitud]" required>
+                                name="Cliente[Direcciones][0][latitud]"
+                                maxlength="12" 
+                                required>
                         <div class="invalid-tooltip">
                             Aviso
                         </div>
@@ -84,7 +96,9 @@
                         <input type="text"
                                 class="form-control"
                                 placeholder="Longitud"
-                                name="Cliente[Direcciones][0][longitud]" required>
+                                name="Cliente[Direcciones][0][longitud]"
+                                maxlength="12"
+                                required>
                         <div class="invalid-tooltip">
                             Aviso
                         </div>
@@ -92,7 +106,6 @@
                     <div class="col-md-2">
                         <button type="button" class="btn btn-danger mt-4" onclick="EliminarCamposDireccion(0)">Eliminar</button>
                     </div>
-                    <hr>
                 </div>
             </div>
             <div class="form-row">
@@ -106,16 +119,18 @@
                     <div class="col-md-4">
                         <label for="">Numero Contacto</label>
                         <input type="text" class="form-control" placeholder="Numero Contacto"
-                            name="Cliente[Telefonos][0][numero]" required>
+                            name="Cliente[Telefonos][0][numero]" 
+                            pattern="[0-9]*"
+                            maxlength="15">
                         <div class="invalid-tooltip">
-                            Aviso
+                            Solo Numeros
                         </div>
                     </div>
                     <div class="col-md-2">
                         <label for="">Tipo</label>
                         <input type="text" class="form-control" placeholder="Tipo" 
                                 name="Cliente[Telefonos][0][tipo]"
-                            required>
+                                >
                         <div class="invalid-tooltip">
                             Aviso
                         </div>

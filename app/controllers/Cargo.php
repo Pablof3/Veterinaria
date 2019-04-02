@@ -27,4 +27,9 @@ class Cargo extends Controller
     {
        $this->mCargo->Eliminar();  
     }
+
+    public function vRegistrar()
+    {
+        $this->vista('Cargo/vRegistrar');
+    }
 }

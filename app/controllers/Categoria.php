@@ -21,7 +21,12 @@ class Categoria extends Controller
     public function Eliminar()
     {
      
-        print_r( $this->mCategoria->Eliminar(2));  
+        $this->mCategoria->Eliminar();  
+    }
+
+    public function vRegistrar()
+    {
+        $this->vista('Categoria/vRegistrar');
     }
 }
 

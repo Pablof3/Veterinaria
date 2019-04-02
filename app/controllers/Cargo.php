@@ -4,7 +4,7 @@ class Cargo extends Controller
 {
     private $mCargo;
     public function __construct() {
-        $this->mCargo = $this->modelo('mCargo');
+        //$this->mCargo = $this->modelo('mCargo');
     }
 
     public function Registrar()

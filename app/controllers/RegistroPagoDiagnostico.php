@@ -1,5 +1,4 @@
 <?php
-require "../app/core/NamespaceCore.php";
 class RegistroPagoDiagnostico extends Controller
 {
     private $mRegistroPagoDiagnostico;

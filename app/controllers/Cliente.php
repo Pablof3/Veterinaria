@@ -1,12 +1,6 @@
 <?php
-require "../app/core/NamespaceCore.php";
 class Cliente extends Controller
 {
-    private $mCliente;
-    public function __construct() 
-    {
-      // $this->mCliente=$this->modelo('mCliente');
-    }
     public function Registrar()
     {
 

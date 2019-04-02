@@ -1,5 +1,4 @@
 <?php 
-require "../app/core/NamespaceCore.php";
 class Usuario extends Controller 
 {
     private $mUsuario;

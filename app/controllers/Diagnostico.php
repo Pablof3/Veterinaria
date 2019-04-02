@@ -32,6 +32,11 @@ class Diagnostico extends Controller
      
         $this->mDiagnostico->Eliminar();  
     }
+
+    public function vRegistrar()
+    {
+        $this->vista('Diagnostico/vRegistrar');
+    }
 }
 
 ?>

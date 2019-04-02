@@ -1,5 +1,4 @@
 <?php
-require_once "../app/core/NamespaceCore.php";
 class Notificacion extends Controller 
 {
     private $mNotificacion;

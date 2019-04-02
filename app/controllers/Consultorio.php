@@ -29,6 +29,11 @@ class Consultorio extends Controller
      
         $this->mConsultorio->Eliminar(2);  
     }
+
+    public function vRegistrar()
+    {
+        $this->vista('Consultorio/vRegistrar');
+    }
 }
 
 ?>

@@ -34,6 +34,18 @@ class Core
                 unset($url[1]);
             }
         }
+
+        //Include Core
+        $files=glob('../app/core/*.php');
+        foreach ($files as $file) {
+            require_once($file);
+        }
+        //Include Models
+        $files=glob('../app/models/*.php');
+        foreach ($files as $file) {
+            require_once($file);
+        }
+
         //echo $this->metodoActual;
         //Parametros
         $this->parametros = $url ? array_values($url) : [];

@@ -14,7 +14,7 @@ function AgregarCamposDireccion() {
         <input type="text"
                 class="form-control"
                 placeholder="Descripcion"
-                name="Cliente[Direcciones][${idDireccion}][descripcion]" 
+                name="Cliente[Direccion][${idDireccion}][descripcion]" 
                 maxlength="30" required>
         <div class="invalid-tooltip">
             Campo Requerido
@@ -25,7 +25,7 @@ function AgregarCamposDireccion() {
         <input type="text"
                 class="form-control"
                 placeholder="Direccion"
-                name="Cliente[Direcciones][${idDireccion}][direccion]"
+                name="Cliente[Direccion][${idDireccion}][direccion]"
                 maxlength="150" 
                 required>
         <div class="invalid-tooltip">
@@ -33,13 +33,13 @@ function AgregarCamposDireccion() {
         </div>
     </div>
 
-    
+
     <div class="col-md-2">
         <label for="">Latitud</label>
         <input type="text"
                 class="form-control"
                 placeholder="Latitud"
-                name="Cliente[Direcciones][${idDireccion}][latitud]"
+                name="Cliente[Direccion][${idDireccion}][latitud]"
                 maxlength="12" 
                 required>
         <div class="invalid-tooltip">
@@ -51,7 +51,7 @@ function AgregarCamposDireccion() {
         <input type="text"
                 class="form-control"
                 placeholder="Longitud"
-                name="Cliente[Direcciones][${idDireccion}][longitud]"
+                name="Cliente[Direccion][${idDireccion}][longitud]"
                 maxlength="12"
                 required>
         <div class="invalid-tooltip">
@@ -83,7 +83,7 @@ function AgregarCamposTelefono() {
         <div class="col-md-4">
             <label for="">Numero Contacto</label>
             <input type="text" class="form-control" placeholder="Numero Contacto"
-                name="Cliente[Telefonos][${idTelefono}][numero]" 
+                name="Cliente[NumContacto][${idTelefono}][numero]" 
                 pattern="[0-9]*"
                 required >
             <div class="invalid-tooltip">
@@ -93,7 +93,7 @@ function AgregarCamposTelefono() {
         <div class="col-md-2">
             <label for="">Tipo</label>
             <input type="text" class="form-control" placeholder="Tipo" 
-                    name="Cliente[Telefonos][${idTelefono}][tipo]" required>
+                    name="Cliente[NumContacto][${idTelefono}][tipo]" required>
             <div class="invalid-tooltip">
                 Aviso
             </div>

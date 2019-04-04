@@ -54,6 +54,11 @@ class Veterinario extends Controller
     {
         $this->mVeterinario->Eliminar(3);
     }
+
+    public function vRegistrar()
+    {
+        $this->vista('Veterinario/vRegistrar');
+    }
 }
 
 ?>

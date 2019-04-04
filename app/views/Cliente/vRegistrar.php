@@ -2,12 +2,12 @@
 <div class=" card mb-4">
     <div class="card-body">
         <h5 class="mb-3">Registro Cliente</h5>
-        <form class="needs-validation mb-5" novalidate method="POST" action="<?= RUTA_URL?>/Cliente/Registrar">
+        <form id="form_ClienteRegistrar" class="needs-validation mb-5" novalidate>
             <div class="form-row">
                 <div class="col-md-3 mb-3">
-                    <label for="validationTooltip001">Nombre</label>
+                    <label for="">Nombre</label>
                     <input type="text" class="form-control" 
-                        id="validationTooltip001" 
+                        id="" 
                         placeholder="nombre"
                         name="Cliente[nombre]" 
                         maxlength="30" 
@@ -66,6 +66,7 @@
             <div id="ClienteTelefonos">
             
             </div>
+            
             <div class="form-row">
                 <button type="button" 
                         class="btn btn-primary btn-lg mb-1 mx-auto"

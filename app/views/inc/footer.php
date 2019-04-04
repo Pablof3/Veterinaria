@@ -8,6 +8,7 @@
     <script src="<?= RUTA_URL;?>/js/vendor/fullcalendar.min.js"></script>
     <script src="<?= RUTA_URL;?>/js/vendor/datatables.min.js"></script>
     <script src="<?= RUTA_URL;?>/js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="<?= RUTA_URL;?>/js/vendor/bootstrap-notify.min.js"></script>
     <script src="<?= RUTA_URL;?>/js/vendor/owl.carousel.min.js"></script>
     <script src="<?= RUTA_URL;?>/js/vendor/progressbar.min.js"></script>
     <script src="<?= RUTA_URL;?>/js/vendor/jquery.barrating.min.js"></script>

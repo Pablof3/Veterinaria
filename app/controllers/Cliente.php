@@ -31,7 +31,11 @@ class Cliente extends Controller
 
             $cliente->Direccion[]=$nuevoDireccion;
         }
-        var_dump[$cliente];
+
+    }
+    public function vRegistrar()
+    {
+        $this->vista('Cliente/vRegistrar');
     }
     public function Actualizar()
     {
@@ -47,11 +51,6 @@ class Cliente extends Controller
     {
      
         $this->mCliente->Eliminar();  
-    }
-
-    public function vRegistrar()
-    {
-        $this->vista('Cliente/vRegistrar');
     }
 }
 

@@ -9,18 +9,18 @@ class Clinica extends Controller
     public function Registrar()
     {
         $clinica=new Core\Clinica;
-        $clinica->nombre_Clinica='Mundo Animal';
-        $clinica->descripcion='Clinica general de animales';
-        $clinica->direccion=1;
+        $clinica->nombre_Clinica=$_POST['Clinica']['nombre_Clinica'];
+        $clinica->descripcion=$_POST['Clinica']['descripcion'];
+        $clinica->direccion=$_POST['Clinica']['direccion'];
         $this->mClinica->Insertar($clinica);  
     }
     public function Actualizar()
     {
         $clinica=new Core\Cliente;
-        $clinica->id_Clinica=1;
-        $clinica->nombre_Clinica='Huesitos';
-        $clinica->descripcion='Clinica general de animales';
-        $clinica->direccion=2;
+        $clinica->id_Clinica=$_POST['Clinica']['id_Clinica'];
+        $clinica->nombre_Clinica=$_POST['Clinica']['nombre'];
+        $clinica->descripcion=$_POST['Clinica']['descripcion'];
+        $clinica->direccion=$_POST['Clinica']['direccion'];
         $this->mClinica->Actualizar($clinica);  
     }
     public function Eliminar()

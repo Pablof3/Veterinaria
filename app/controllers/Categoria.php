@@ -8,14 +8,14 @@ class Categoria extends Controller
     public function Registrar()
     {
         $categoria=new Core\Categoria;
-        $categoria->nombre='Juguetes';
+        $categoria->nombre=$_POST['Categoria']['nombre'];
         $this->mCategoria->Insertar($categoria);  
     }
     public function Actualizar()
     {
         $categoria=new Core\Categoria;
         $categoria->id_Categoria=1;
-        $categoria->nombre='Alimentos';
+        $categoria->nombre=$_POST['Categoria']['nombre'];
         $this->mCategoria->Actualizar($categoria);  
     }
     public function Eliminar()

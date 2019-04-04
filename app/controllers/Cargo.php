@@ -12,15 +12,14 @@ class Cargo extends Controller
         $cargo=new Core\Cargo;
         //$mascota->id_Mascota=1;
         $cargo->id_Cargo=1;
-        $cargo->nombre='Ciruja';
+        $cargo->nombre=$_POST['Cargo']['nombre'];
         $this->mCargo->Insertar($cargo);  
     }
     public function Actualizar()
     {
         $cargo=new Core\Cargo;
         $cargo->id_Cargo=2;
-        $cargo->nombre=1;
-        $cargo->nombre='cajero';
+        $cargo->nombre=$_POST['Cargo']['nombre'];
         $this->mCargo->Actualizar($cargo);  
     }
     public function Eliminar()

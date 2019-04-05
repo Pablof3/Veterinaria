@@ -9,11 +9,11 @@ class Proveedor extends Controller
     public function Registrar()
     {
         $proveedor=new Core\Proveedor;
-        $proveedor->id_Proveedor=1;
-        $proveedor->empresa='Wiskas';
-        $proveedor->ci='98764523';
+        $proveedor->id_Proveedor=$_POST['Proveedor']['id_Proveedor'];
+        $proveedor->empresa=$_POST['Proveedor']['empresa'];
+        $proveedor->ci=$_POST['Proveedor']['ci'];
         $proveedor->nit=null;
-        $proveedor->encargado='César Gamez Salada';
+        $proveedor->encargado=$_POST['Proveedor']['encargado'];
 
         $this->mProveedor->Insertar($proveedor);
     }
@@ -21,11 +21,11 @@ class Proveedor extends Controller
     public function Actualizar()
     {
         $proveedor=new Core\Proveedor;
-        $proveedor->id_Proveedor=1;
-        $proveedor->empresa='Pedigree';
-        $proveedor->ci='98563523';
+        $proveedor->id_Proveedor=$_POST['Proveedor']['id_Proveedor'];
+        $proveedor->empresa=$_POST['Proveedor']['empresa'];
+        $proveedor->ci=$_POST['Proveedor']['ci'];
         $proveedor->nit=null;
-        $proveedor->encargado='César Gamez';
+        $proveedor->encargado=$_POST['Proveedor']['encargado'];
 
         $this->mProveedor->Actualizar($proveedor);
     }

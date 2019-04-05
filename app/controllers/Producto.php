@@ -42,6 +42,11 @@ class Producto extends Controller
     {
         $this->mProducto->Eliminar(2);
     }
+
+    public function vRegistrar()
+    {
+        $this->vista('Producto/vRegistrar');
+    }
 }
 
 ?>

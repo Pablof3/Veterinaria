@@ -1,13 +1,13 @@
 <?php 
 class mProveedor  
 {
-    private $db;
-    public function __construct() {
-        $this->db=new Database();
-    }
+    
 
     public function Insertar($proveedor)
     {
+        $db=new Database;
+        try {
+            $db->beginTransaction();
         $query="INSERT INTO Proveedor(empresa, ci, nit, encargado)
                 VALUES (:empresa, :ci, :nit, :encargado)";
         $this->db->query($query);
@@ -15,7 +15,32 @@ class mProveedor
         $this->db->bParam(':ci',$proveedor->ci);
         $this->db->bParam(':nit',$proveedor->nit);
         $this->db->bParam(':encargado',$proveedor->encargado);
-        return $this->db->execute();
+        
+        // REegistrar Numeros
+            $query="INSERT INTO NumContacto(id_NumPropietario, numero, tipo)
+                    VALUES (:id_NumPropietario, :numero, :tipo)";
+            $db->query($query);
+            foreach ($proveedor->NumContacto as  $nuevoContacto) {
+                $db->bParam(':id_NumPropietario', $nuevoContacto->id_NumPropietario);
+                $db->bParam(':numero',$nuevoContacto->numero);
+                $db->bParam(':tipo', $nuevoContacto->tipo);
+                $db->execute();
+            }
+            // Registrar Direcciones
+            $query="INSERT INTO Direccion(id_DireccionPropietario, descripcion, direccion, latitud, longitud)
+                    VALUES (:id_DireccionPropietario, :descripcion, :direccion, :latitud, :longitud )";
+            $db->query($query);
+            foreach ($proveedor->Direccion as $nuevaDireccion) {
+                $db->bParam(':id_DireccionPropietario',$nuevaDireccion->id_DireccionPropietario);
+                $db->bParam(':descripcion', $nuevaDireccion->descripcion);
+                $db->bParam(':direccion', $nuevaDireccion->direccion);
+                $db->bParam(':latitud', $nuevaDireccion->latitud);
+                $db->bParam(':longitud', $nuevaDireccion->longitud);
+            }
+            $db->commit();
+        } catch (Throwable $th) {
+            $db->rollback();
+        }
     }
     public function Actualizar($proveedor)
     {

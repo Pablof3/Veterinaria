@@ -8,16 +8,16 @@ class TipoContacto extends Controller
     public function Registrar()
     {
         $tipoContacto=new Core\TipoContacto;
-        $tipoContacto->id_TipoContacto=1;
-        $tipoContacto->nombre='Principal';
+        $tipoContacto->id_TipoContacto=$_POST['TipoContacto']['id_TipoContacto'];
+        $tipoContacto->nombre=$_POST['TipoContacto']['nombre'];
         $this->mTipoContacto->Insertar($tipoContacto);
     }
 
     public function Actualizar()
     {
         $tipoContacto=new Core\TipoContacto;
-        $tipoContacto->id_TipoContacto=1;
-        $tipoContacto->nombre='Secundario';
+        $tipoContacto->id_TipoContacto=$_POST['TipoContacto']['id_TipoContacto'];
+        $tipoContacto->nombre=$_POST['TipoContacto']['nombre'];
         $this->mTipoContacto->Actualizar($tipoContacto);
     }
 

@@ -34,6 +34,11 @@ class Paquete extends Controller
     {
         $this->mPaquete->Eliminar(1);
     }
+
+    public function vRegistrar()
+    {
+        $this->vista('Paquete/vRegistrar');
+    }
 }
 
 ?>

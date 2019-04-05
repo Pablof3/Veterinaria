@@ -9,20 +9,20 @@ class Notificacion extends Controller
     public function Registrar()
     {
         $notificacion=new Core\Notificacion;
-        $notificacion->id_Notificacion=1;
-        $notificacion->id_Cliente=1;
-        $notificacion->mensaje='Mensaje Prueba';
-        $notificacion->fechaEnvio='2019-03-06 18:00:00';
+        $notificacion->id_Notificacion=$_POST['Notificacion']['id_Notificacion'];
+        $notificacion->id_Cliente=$_POST['Notificacion']['id_Cliente'];
+        $notificacion->mensaje=$_POST['Notificacion']['mensaje'];
+        $notificacion->fechaEnvio=$_POST['Notificacion']['fechaEnvio'];
         print_r($notificacion);
         print_r($this->mNotificacion->Insertar($notificacion));
     }
     public function Actualizar()
     {
         $notificacion=new Core\Notificacion;
-        $notificacion->id_Notificacion=4;
-        $notificacion->id_Cliente=1;
-        $notificacion->mensaje='Mensaje Prueba Actulizado';
-        $notificacion->fechaEnvio='2019-08-10 13:00:00';
+        $notificacion->id_Notificacion=$_POST['Notificacion']['id_Notificacion'];
+        $notificacion->id_Cliente=$_POST['Notificacion']['id_Cliente'];
+        $notificacion->mensaje=$_POST['Notificacion']['mensaje'];
+        $notificacion->fechaEnvio=$_POST['Notificacion']['fechaEnvio'];
         print_r($notificacion);
         $this->mNotificacion->Actualizar($notificacion);
     }

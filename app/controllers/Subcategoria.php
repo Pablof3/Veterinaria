@@ -9,18 +9,18 @@ class Subcategoria extends Controller
     public function Registrar()
     {
         $subcategoria=new Core\Subcategoria;
-        $subcategoria->id_Subcategoria=1;
-        $subcategoria->id_Categoria=1;
-        $subcategoria->nombre='Alimento';
+        $subcategoria->id_Subcategoria=$_POST['Subcategoria']['id_Subcategoria'];
+        $subcategoria->id_Categoria=$_POST['Subcategoria']['id_Categoria'];
+        $subcategoria->nombre=$_POST['Subcategoria']['nombre'];
 
         $this->mSubcategoria->Insertar($subcategoria);
     }
     public function Actualizar()
     {
         $subcategoria=new Core\Subcategoria;
-        $subcategoria->id_Subcategoria=1;
-        $subcategoria->id_Categoria=2;
-        $subcategoria->nombre='Juguetes';
+        $subcategoria->id_Subcategoria=$_POST['Subcategoria']['id_Subcategoria'];
+        $subcategoria->id_Categoria=$_POST['Subcategoria']['id_Categoria'];
+        $subcategoria->nombre=$_POST['Subcategoria']['nombre'];
 
         $this->mSubcategoria->Actualizar($subcategoria);
     }

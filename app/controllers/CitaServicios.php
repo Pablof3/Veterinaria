@@ -9,16 +9,16 @@ class CitaServicios extends Controller
     public function Registrar()
     {
         $citaservicios=new Core\CitaServicios;
-        $citaservicios->id_Cita=2;
-        $citaservicios->id_Servicio=2;
+        $citaservicios->id_Cita=$_POST['CitaServicios']['id_Cita'];
+        $citaservicios->id_Servicio=$_POST['CitaServicios']['id_Servicio'];
         $this->mCitaServicios->Insertar($citaservicios);  
     }
     public function Actualizar()
     {
         $citaservicios=new Core\CitaServicios;
-        $citaservicios->id_CitaServicios=1;
-        $citaservicios->id_Cita=4;
-        $citaservicios->id_Servicio=4;
+        $citaservicios->id_CitaServicios=$_POST['CitaServicios']['id_CitaServicios'];
+        $citaservicios->id_Cita=$_POST['CitaServicios']['id_Cita'];
+        $citaservicios->id_Servicio=$_POST['CitaServicios']['id_Servicio'];
         $this->mCitaServicios->Actualizar($citaservicios);  
     }
     public function Eliminar()

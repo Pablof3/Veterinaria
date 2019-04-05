@@ -9,10 +9,10 @@ class Usuario extends Controller
     public function Registrar()
     {
         $usuario=new Core\Usuario;
-        $usuario->id_Usuario=1;
-        $usuario->username='Usuario1';
-        $usuario->email='Usuario1@Vet.com';
-        $usuario->password='pUsuario1';
+        $usuario->id_Usuario=$_POST['Usuario']['id_Usuario'];
+        $usuario->username=$_POST['Usuario']['username'];
+        $usuario->email=$_POST['Usuario']['email'];
+        $usuario->password=$_POST['Usuario']['password'];
         $usuario->cargo=1;
 
         $this->mUsuario->Insertar($usuario);
@@ -21,10 +21,10 @@ class Usuario extends Controller
     public function Actualizar()
     {
         $usuario=new Core\Usuario;
-        $usuario->id_Usuario=1;
-        $usuario->username='Usuario';
-        $usuario->email='Usuario@Vet.com';
-        $usuario->password='pUsuario';
+        $usuario->id_Usuario=$_POST['Usuario']['id_Usuario'];
+        $usuario->username=$_POST['Usuario']['username'];
+        $usuario->email=$_POST['Usuario']['email'];
+        $usuario->password=$_POST['Usuario']['password'];
         $usuario->cargo=2;
 
         $this->mUsuario->Actualizar($usuario);

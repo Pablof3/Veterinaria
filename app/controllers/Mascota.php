@@ -8,25 +8,25 @@ class Mascota extends Controller
     public function Registrar()
     {
         $mascota=new Core\Mascota;
-        $mascota->id_Mascota=1;
-        $mascota->id_Cliente=1;
-        $mascota->nombre_Mascota='Charlie';
-        $mascota->tipo_Mascota='Perro';
-        $mascota->edad=4;
-        $mascota->peso=3;
-        $mascota->raza='Boxer';
+        $mascota->id_Mascota=$_POST['Mascota']['id_Mascota'];
+        $mascota->id_Cliente=$_POST['Mascota']['id_Cliente'];
+        $mascota->nombre_Mascota=$_POST['Mascota']['nombre_Mascota'];
+        $mascota->tipo_Mascota=$_POST['Mascota']['tipo_Mascota'];
+        $mascota->edad=$_POST['Mascota']['edad'];
+        $mascota->peso=$_POST['Mascota']['peso'];
+        $mascota->raza=$_POST['Mascota']['raza'];
         $this->mMascota->Insertar($mascota);  
     }
     public function Actualizar()
     {
         $mascota=new Core\Mascota;
-        $mascota->id_Mascota=2;
-        $mascota->id_Cliente=1;
-        $mascota->nombre_Mascota='Charlie';
-        $mascota->tipo_Mascota='gato';
-        $mascota->edad=4;
-        $mascota->peso=3;
-        $mascota->raza='Persa';
+        $mascota->id_Mascota=$_POST['Mascota']['id_Mascota'];
+        $mascota->id_Cliente=$_POST['Mascota']['id_Cliente'];
+        $mascota->nombre_Mascota=$_POST['Mascota']['nombre_Mascota'];
+        $mascota->tipo_Mascota=$_POST['Mascota']['tipo_Mascota'];
+        $mascota->edad=$_POST['Mascota']['edad'];
+        $mascota->peso=$_POST['Mascota']['peso'];
+        $mascota->raza=$_POST['Mascota']['raza'];
         $this->mMascota->Actualizar($mascota);  
     }
     public function Eliminar()

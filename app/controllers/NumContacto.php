@@ -10,19 +10,19 @@ class NumContacto extends Controller
     public function Registrar()
     {
         $numContacto=new Core\NumContacto;
-        $numContacto->id_NumContacto=1;
-        $numContacto->id_NumPropietario=1;
-        $numContacto->numero='76543231';
-        $numContacto->tipo=1;
+        $numContacto->id_NumContacto=$_POST['NumContacto']['id_NumContacto'];
+        $numContacto->id_NumPropietario=$_POST['NumContacto']['id_NumPropietario'];
+        $numContacto->numero=$_POST['NumContacto']['numero'];
+        $numContacto->tipo=$_POST['NumContacto']['tipo'];
         $this->mNumContacto->Insertar($numContacto);
     }
     public function Actualizar()
     {
         $numContacto=new Core\NumContacto;
-        $numContacto->id_NumContacto=1;
-        $numContacto->id_NumPropietario=2;
-        $numContacto->numero='66543234';
-        $numContacto->tipo=1;
+        $numContacto->id_NumContacto=$_POST['NumContacto']['id_NumContacto'];
+        $numContacto->id_NumPropietario=$_POST['NumContacto']['id_NumPropietario'];
+        $numContacto->numero=$_POST['NumContacto']['numero'];
+        $numContacto->tipo=$_POST['NumContacto']['tipo'];
         $this->mNumContacto->Actualizar($numContacto);
     }
 

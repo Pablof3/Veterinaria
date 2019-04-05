@@ -9,20 +9,20 @@ class Venta extends Controller
     public function Registrar()
     {
         $venta=new Core\Venta;
-        $venta->id_Venta=1;
-        $venta->id_Cliente=1;
-        $venta->id_Usuario=1;
-        $venta->total=500.00;
+        $venta->id_Venta=$_POST['Venta']['id_Venta'];
+        $venta->id_Cliente=$_POST['Venta']['id_Cliente'];
+        $venta->id_Usuario=$_POST['Venta']['id_Usuario'];
+        $venta->total=$_POST['Venta']['Total'];
         $this->mVenta->Insertar($venta);
     }
 
     public function Actualizar()
     {
         $venta=new Core\Venta;
-        $venta->id_Venta=1;
-        $venta->id_Cliente=1;
-        $venta->id_Usuario=1;
-        $venta->total=1000.00;
+        $venta->id_Venta=$_POST['Venta']['id_Venta'];
+        $venta->id_Cliente=$_POST['Venta']['id_Cliente'];
+        $venta->id_Usuario=$_POST['Venta']['id_Usuario'];
+        $venta->total=$_POST['Venta']['total'];
         $this->mVenta->Actualizar($venta);
     }
 

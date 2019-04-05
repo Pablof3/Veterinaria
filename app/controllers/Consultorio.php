@@ -20,7 +20,7 @@ class Consultorio extends Controller
         $consultorio->id_Consultorio=$_POST['Consultorio']['id_Cosultorio'];
         $consultorio->id_Clinica=$_POST['Consultorio']['id_Clinica'];
         $consultorio->nombre=$_POST['Consultorio']['nombre'];
-        $consultorio->descripcion=$_POST['Consultorio']['descripcion'];
+        $consultorio->descripcion=$_POST['Consultorio']['descripcion']; 
         $this->mConsultorio->Actualizar($consultorio);  
     }
     public function Eliminar()

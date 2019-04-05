@@ -9,18 +9,18 @@ class Consultorio extends Controller
     public function Registrar()
     {
         $consultorio=new Core\Consultorio;
-        $consultorio->id_Clinica=2;
-        $consultorio->nombre='A1';
-        $consultorio->descripcion='Consultorio de atencion general';
+        $consultorio->id_Clinica=$_POST['Consultorio']['id_Clinica'];
+        $consultorio->nombre=$_POST['Consultorio']['nombre'];
+        $consultorio->descripcion=$_POST['Consultorio']['descripcion'];
         $this->mConsultorio->Insertar($consultorio);  
     }
     public function Actualizar()
     {
         $consultorio=new Core\Consultorio;
-        $consultorio->id_Consultorio=1;
-        $consultorio->id_Clinica=2;
-        $consultorio->nombre='Bm2';
-        $consultorio->descripcion='Terapia intensiva';
+        $consultorio->id_Consultorio=$_POST['Consultorio']['id_Cosultorio'];
+        $consultorio->id_Clinica=$_POST['Consultorio']['id_Clinica'];
+        $consultorio->nombre=$_POST['Consultorio']['nombre'];
+        $consultorio->descripcion=$_POST['Consultorio']['descripcion'];
         $this->mConsultorio->Actualizar($consultorio);  
     }
     public function Eliminar()

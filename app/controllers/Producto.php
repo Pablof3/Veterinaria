@@ -9,32 +9,32 @@ class Producto extends Controller
     public function Registrar()
     {
         $producto=new Core\Producto;
-        $producto->id_Producto=1;
-        $producto->id_Categoria=1;
-        $producto->id_Subcategoria=1;
-        $producto->nombre='Comida para Perro';
-        $producto->descripcion='Comida para Perro Pequeño';
-        $producto->cantMinInv=5;
-        $producto->stock=0;
-        $producto->codigo_Lote='Pr123';
-        $producto->precio_Compra=30.5;
-        $producto->precio_Venta=40;
+        $producto->id_Producto=$_POST['Producto']['id_Producto'];
+        $producto->id_Categoria=$_POST['Producto']['id_Categoria'];
+        $producto->id_Subcategoria=$_POST['Producto']['id_Subcategoria'];
+        $producto->nombre=$_POST['Producto']['nombre'];
+        $producto->descripcion=$_POST['Producto']['id_Producto'];
+        $producto->cantMinInv=$_POST['Producto']['cantMinInv'];
+        $producto->stock=$_POST['Producto']['stock'];
+        $producto->codigo_Lote=$_POST['Producto']['codigo_Lote'];
+        $producto->precio_Compra=$_POST['Producto']['precio_Compra'];
+        $producto->precio_Venta=$_POST['Producto']['precio_Venta'];
         $this->mProducto->Insertar($producto);
     }
 
     public function Actualizar()
     {
         $producto=new Core\Producto;
-        $producto->id_Producto=1;
-        $producto->id_Categoria=1;
-        $producto->id_Subcategoria=1;
-        $producto->nombre='Comida para Perro';
-        $producto->descripcion='Comida para Perro Grande';
-        $producto->cantMinInv=5;
-        $producto->stock=0;
-        $producto->codigo_Lote='Pr123';
-        $producto->precio_Compra=30.5;
-        $producto->precio_Venta=40;
+        $producto->id_Producto=$_POST['Producto']['id_Producto'];
+        $producto->id_Categoria=$_POST['Producto']['id_Categoria'];
+        $producto->id_Subcategoria=$_POST['Producto']['id_Subcategoria'];
+        $producto->nombre=$_POST['Producto']['nombre'];
+        $producto->descripcion=$_POST['Producto']['descripcion'];
+        $producto->cantMinInv=$_POST['Producto']['cantMinInv'];
+        $producto->stock=$_POST['Producto']['stock'];
+        $producto->codigo_Lote=$_POST['Producto']['codigo_Lote'];
+        $producto->precio_Compra=$_POST['Producto']['precio_Compra'];
+        $producto->precio_Venta=$_POST['Producto']['id_Venta'];
         $this->mProducto->Actualizar($producto);
     }
 

@@ -9,22 +9,22 @@ class HorarioVeterinarioConsultorio extends Controller
     public function Registrar()
     {
         $horarioveterinarioconsultorio=new Core\HorarioVeterinarioConsultorio;
-        $horarioveterinarioconsultorio->id_Consultorio=1;
-        $horarioveterinarioconsultorio->id_Veterinario= 1;
+        $horarioveterinarioconsultorio->id_Consultorio=$_POST['HorarioVeterinarioConsultorio']['id_Consultorio'];
+        $horarioveterinarioconsultorio->id_Veterinario=$_POST['HorarioVeterinarioConsultorio']['id_Veterinario'];
         //$horarioveterinarioconsultorio->horario_Inicio=date('H:i:s', time());
-        $horarioveterinarioconsultorio->horario_Inicio='09:00:00';
-        $horarioveterinarioconsultorio->horario_Fin='18:00:00';
+        $horarioveterinarioconsultorio->horario_Inicio=$_POST['HorarioVeterinarioConsultorio']['horario_Inicio'];
+        $horarioveterinarioconsultorio->horario_Fin=$_POST['HorarioVeterinarioConsultorio']['horario_Fin'];
         $this->mHorarioVeterinarioConsultorio->Insertar($horarioveterinarioconsultorio);  
     }
     public function Actualizar()
     {
         $horarioveterinarioconsultorio=new Core\HorarioVeterinarioConsultorio;
-        $horarioveterinarioconsultorio->id_HorarioVetCon=1;
-        $horarioveterinarioconsultorio->id_Consultorio=1;
-        $horarioveterinarioconsultorio->id_Veterinario= 1;
+        $horarioveterinarioconsultorio->id_HorarioVetCon=$_POST['HorarioVeterinarioConsultorio']['id_HorarioVetCon'];
+        $horarioveterinarioconsultorio->id_Consultorio=$_POST['HorarioVeterinarioConsultorio']['id_Consultorio'];
+        $horarioveterinarioconsultorio->id_Veterinario=$_POST['HorarioVeterinarioConsultorio']['id_Veterinario'];
         //$horarioveterinarioconsultorio->horario_Inicio=date('H:i:s', time());
-        $horarioveterinarioconsultorio->horario_Inicio='10:00:00';
-        $horarioveterinarioconsultorio->horario_Fin='18:00:00';
+        $horarioveterinarioconsultorio->horario_Inicio=$_POST['HorarioVeterinarioConsultorio']['horario_Inicio'];
+        $horarioveterinarioconsultorio->horario_Fin=$_POST['HorarioVeterinarioConsultorio']['horario_Fin'];
         $this->mHorarioVeterinarioConsultorio->Actualizar($horarioveterinarioconsultorio);   
     }
     public function Eliminar()

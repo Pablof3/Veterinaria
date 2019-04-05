@@ -9,22 +9,22 @@ class Diagnostico extends Controller
     public function Registrar()
     {
         $diagnostico=new Core\Diagnostico;
-        $diagnostico->id_Cita=1;
-        $diagnostico->diagnostico='Perro accidentado';
-        $diagnostico->codigo='p-02';
-        $diagnostico->precio_Total=200;
-        $diagnostico->saldo=100;
+        $diagnostico->id_Cita=$_POST['Diagnostico']['id_Cita'];
+        $diagnostico->diagnostico=$_POST['Diagnostico']['diagnostico'];
+        $diagnostico->codigo=$_POST['Diagnostico']['codigo'];
+        $diagnostico->precio_Total=$_POST['Diagnostico']['precio_Total'];
+        $diagnostico->saldo=$_POST['Diagnostico']['saldo'];
         $this->mDiagnostico->Insertar($diagnostico);  
     }
     public function Actualizar()
     {
         $diagnostico=new Core\Diagnostico;
-        $diagnostico->id_Diagnostico=2;
-        $diagnostico->id_Cita=1;
-        $diagnostico->diagnostico='Perro con tripa seca caida';
-        $diagnostico->codigo='p-02';
-        $diagnostico->precio_Total=200;
-        $diagnostico->saldo=100;
+        $diagnostico->id_Diagnostico=$_POST['Diagnostico']['id_Diagnostico'];
+        $diagnostico->id_Cita=$_POST['Diagnostico']['id_Cita'];
+        $diagnostico->diagnostico=$_POST['Diagnostico']['diagnostico'];
+        $diagnostico->codigo=$_POST['Diagnostico']['codigo'];
+        $diagnostico->precio_Total=$_POST['Diagnostico']['precio_Total'];
+        $diagnostico->saldo=$_POST['Diagnostico']['saldo'];
         $this->mDiagnostico->Actualizar($diagnostico);  
     }
     public function Eliminar()

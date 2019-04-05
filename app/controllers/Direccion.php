@@ -9,22 +9,22 @@ class Direccion extends Controller
     public function Registrar()
     {
         $direccion=new Core\Direccion;
-        $direccion->id_DireccionPropietario=1;
-        $direccion->descripcion='Casa amarilla';
-        $direccion->direccion='Av.segunda entre pasaje luna y calle ramon';
-        $direccion->latitud=123.12345;
-        $direccion->longitud=456.78945;
+        $direccion->id_DireccionPropietario=$_POST['Direccion']['id_DireccionPropietario'];
+        $direccion->descripcion=$_POST['Direccion']['descripcion'];
+        $direccion->direccion=$_POST['Direccion']['direccion'];
+        $direccion->latitud=$_POST['Direccion']['latitud'];
+        $direccion->longitud=$_POST['Direccion']['longitud'];
         $this->mDireccion->Insertar($direccion);  
     }
     public function Actualizar()
     {
         $direccion=new Core\Direccion;
-        $direccion->id_Direccion=1;
-        $direccion->id_DireccionPropietario=1;
-        $direccion->descripcion='Casa roja';
-        $direccion->direccion='Av.segunda entre pasaje luna y calle ramon';
-        $direccion->latitud=123.12345;
-        $direccion->longitud=456.78945;
+        $direccion->id_Direccion=$_POST['Direccion']['id_Direccion'];
+        $direccion->id_DireccionPropietario=$_POST['DIreccion']['id_DireccionPropietario'];
+        $direccion->descripcion=$_POST['Direccion']['descripcion'];
+        $direccion->direccion=$_POST['Direccion']['direccion'];
+        $direccion->latitud=$_POST['Direccion']['latitud'];
+        $direccion->longitud=$_POST['Direccion']['longitud'];
         $this->mDireccion->Actualizar
         ($direccion);   
     }

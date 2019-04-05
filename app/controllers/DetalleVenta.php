@@ -9,22 +9,22 @@ class DetalleVenta extends Controller
     public function Registrar()
     {
         $detalleventa=new Core\DetalleVenta;
-        $detalleventa->id_Venta=1;
-        $detalleventa->id_Producto= 1;
-        $detalleventa->precio_Venta=12345.66;
-        $detalleventa->cantidad=2;
-        $detalleventa->subtotal=523.45;
+        $detalleventa->id_Venta=$_POST['DetalleVenta']['id_Venta'];
+        $detalleventa->id_Producto=$_POST['DetalleVenta']['id_Producto'];
+        $detalleventa->precio_Venta=$_POST['DetalleVenta']['precio_Venta'];
+        $detalleventa->cantidad=$_POST['DetalleVenta']['cantidad'];
+        $detalleventa->subtotal=$_POST['DetalleVenta']['subtotal'];
         $this->mDetalleVenta->Insertar($detalleventa);  
     }
     public function Actualizar()
     {
         $detalleventa=new Core\DetalleVenta;
-        $detalleventa->id_DetalleVenta=1;
-        $detalleventa->id_Venta=1;
-        $detalleventa->id_Producto= 1;
-        $detalleventa->precio_Venta=12.66;
-        $detalleventa->cantidad=2;
-        $detalleventa->subtotal=523.45;
+        $detalleventa->id_DetalleVenta=$_POST['DetalleVenta']['id_DetalleVenta'];
+        $detalleventa->id_Venta=$_POST['DetalleVenta']['id_Venta'];
+        $detalleventa->id_Producto=$_POST['DetalleVenta']['id_Producto'];
+        $detalleventa->precio_Venta=$_POST['DetalleVenta']['precio_Venta'];
+        $detalleventa->cantidad=$_POST['DetalleVenta']['cantidad'];
+        $detalleventa->subtotal=$_POST['DetalleVenta']['subtotal'];
         $this->mDetalleVenta->Actualizar($detalleventa);   
     }
     public function Eliminar()

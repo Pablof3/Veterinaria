@@ -9,22 +9,22 @@ class DetalleCompra extends Controller
     public function Registrar()
     {
         $detallecompra=new Core\DetalleCompra;
-        $detallecompra->id_Compra=1;
-        $detallecompra->id_Producto= 1;
-        $detallecompra->precio_Compra=123.66;
-        $detallecompra->cantidad=2;
-        $detallecompra->subtotal=52.45;
+        $detallecompra->id_Compra=$_POST['DetalleCompra']['id_Compra'];
+        $detallecompra->id_Producto=$_POST['DetalleCompra']['id_Producto'];
+        $detallecompra->precio_Compra=$_POST['DetalleCompra']['precio_Compra'];
+        $detallecompra->cantidad=$_POST['DetalleCompra']['cantidad'];
+        $detallecompra->subtotal=$_POST['DetalleCompra']['subtotal'];
         $this->mDetalleCompra->Insertar($detallecompra);  
     }
     public function Actualizar()
     {
         $detallecompra=new Core\DetalleCompra;
-        $detallecompra->id_DetalleCompra=1;
-        $detallecompra->id_Compra=1;
-        $detallecompra->id_Producto= 1;
-        $detallecompra->precio_Compra=1234.66;
-        $detallecompra->cantidad=2;
-        $detallecompra->subtotal=52.45;
+        $detallecompra->id_DetalleCompra=$_POST['DetalleCompra']['id_DetalleCompra'];
+        $detallecompra->id_Compra=$_POST['DetalleCompra']['id_Compra'];
+        $detallecompra->id_Producto=$_POST['DetalleCompra']['id_Producto'];
+        $detallecompra->precio_Compra=$_POST['DetalleCompra']['precio_Compra'];
+        $detallecompra->cantidad=$_POST['DetalleCOmpra']['cantidad'];
+        $detallecompra->subtotal=$_POST['DetalleCompra']['subtotal'];
         $this->mDetalleCompra->Actualizar($detallecompra);   
     }
     public function Eliminar()

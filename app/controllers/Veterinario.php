@@ -9,7 +9,7 @@ class Veterinario extends Controller
     public function Registrar()
     {
         $veterinario=new Core\Veterinario;
-        $veterinario->id_Veterinario=1;
+        $veterinario->id_Veterinario=$_POST['Veterinario']['id_Veterinario'];
         $veterinario->nombre=$_POST['Veterinario']['nombre'];
         $veterinario->apellido=$_POST['Veterinario']['apellido'];
         $veterinario->especialidad=$_POST['Veterinario']['especialidad'];
@@ -42,10 +42,10 @@ class Veterinario extends Controller
     public function Actualizar()
     {
         $veterinario=new Core\Veterinario;
-        $veterinario->id_Veterinario=1;
-        $veterinario->nombre='Narciso Fortunato';
-        $veterinario->apellido='Rafique Faisal';
-        $veterinario->especialidad='Dermatologia';
+        $veterinario->id_Veterinario=$_POST['Veterinario']['id_Veterinario'];
+        $veterinario->nombre=$_POST['Veterinario']['nombre'];
+        $veterinario->apellido=$_POST['Veterinario']['apellido'];
+        $veterinario->especialidad=$_POST['Veterinario']['especialidad'];
 
         $this->mVeterinario->Actualizar($veterinario);
     }

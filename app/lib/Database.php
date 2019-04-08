@@ -124,7 +124,11 @@ class Database
     {
         $this->dbh->rollback();
     }
-
+    public function fetchColumn($column = 0)
+    {
+        $this->execute();
+        return $this->stmt->fetchColumn($column);
+    }
      
 }
 

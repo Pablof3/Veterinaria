@@ -31,7 +31,9 @@ class Cliente extends Controller
 
             $cliente->Direccion[]=$nuevoDireccion;
         }
-
+        $mCliente=new mCliente;
+        $resp=$mCliente->Insertar($cliente);
+        echo json_encode($resp);
     }
     public function vRegistrar()
     {
@@ -46,6 +48,14 @@ class Cliente extends Controller
         $cliente->ci='7938252';
         $cliente->nit='7938252456';
         $this->mCliente->Actualizar($cliente);  
+    }
+
+    public function vDetalle($id)
+    {
+        $mCliente=new mCliente;
+        $cliente=$mCliente->GetCliente($id);
+        $data=['Cliente'=>$cliente];
+        $this->vista('Cliente/vDetalle', $data);
     }
     public function Eliminar()
     {

@@ -3,21 +3,22 @@ class mCliente
 {
     public function Insertar(Core\Cliente $cliente)
     {
+        $resp['status']=true;
         $db=new Database;
         try {
             $db->beginTransaction();
             $query="INSERT INTO Cliente (nombre, apellido, ci, nit) 
                     VALUES (:nombre, :apellido, :ci, :nit)";
             $db->query($query);
-            $db->bParam(':nombre' , $Cliente->nombre);
-            $db->bParam(':apellido', $Cliente->apellido);
-            $db->bParam(':ci' , $Cliente->ci);
-            $db->bParam(':nit' , $Cliente->nit);
-
+            $db->bParam(':nombre' , $cliente->nombre);
+            $db->bParam(':apellido', $cliente->apellido);
+            $db->bParam(':ci' , $cliente->ci);
+            $db->bParam(':nit' , $cliente->nit);
+            $db->execute();
             // REegistrar Numeros
-            $query="INSERT INTO NumContacto(id_NumPropietario, numero, tipo)
+            $query1="INSERT INTO NumContacto(id_NumPropietario, numero, tipo)
                     VALUES (:id_NumPropietario, :numero, :tipo)";
-            $db->query($query);
+            $db->query($query1);
             foreach ($cliente->NumContacto as  $nuevoContacto) {
                 $db->bParam(':id_NumPropietario', $nuevoContacto->id_NumPropietario);
                 $db->bParam(':numero',$nuevoContacto->numero);
@@ -25,21 +26,24 @@ class mCliente
                 $db->execute();
             }
             // Registrar Direcciones
-            $query="INSERT INTO Direccion(id_DireccionPropietario, descripcion, direccion, latitud, longitud)
+            $query2="INSERT INTO Direccion(id_DireccionPropietario, descripcion, direccion, latitud, longitud)
                     VALUES (:id_DireccionPropietario, :descripcion, :direccion, :latitud, :longitud )";
-            $db->query($query);
+            $db->query($query2);
             foreach ($cliente->Direccion as $nuevaDireccion) {
                 $db->bParam(':id_DireccionPropietario',$nuevaDireccion->id_DireccionPropietario);
                 $db->bParam(':descripcion', $nuevaDireccion->descripcion);
                 $db->bParam(':direccion', $nuevaDireccion->direccion);
                 $db->bParam(':latitud', $nuevaDireccion->latitud);
                 $db->bParam(':longitud', $nuevaDireccion->longitud);
+                $db->execute();
             }
             $db->commit();
-        } catch (Throwable $th) {
+        } 
+        catch (PDOException $th) {
+            $resp['status']=false;
             $db->rollback();
         }
-    
+        return $resp;
     }
 
     public function Actualizar($Cliente)
@@ -64,4 +68,54 @@ class mCliente
         $this->db->bParam(':id_Cliente',$id);
         return $this->db->execute();
     } 
+    
+    /**
+     * Recupera un Cliente por Id
+     * @param Int $id Id de Cliente
+     * @return Core\Cliente
+     **/
+    public function GetCliente($id)
+    {
+        $db=new Database;
+        $cliente=new Core\Cliente;
+        $resp['status']=true;
+        try {
+            $db->beginTransaction();
+            $query="SELECT * 
+                    FROM Cliente 
+                    WHERE id_Cliente=:id";
+            $db->query($query);
+            $db->bParam(':id', $id);
+            $cliente=$db->getRegistro();
+
+            $query="SELECT * 
+                    FROM NumContacto
+                    WHERE id_NumPropietario=:id";
+            $db->query($query);
+            $db->bParam(':id', $id);
+            $numContactos=$db->getRegistros();
+
+            $query="SELECT nombre 
+                    FROM TipoContacto
+                    WHERE id_TipoContacto=:id_TipoContacto";
+            $db->query($query);
+            foreach ($numContactos as $numContacto) {
+                $db->bParam(':id_TipoContacto', $numContacto->tipo);
+                $numContacto->tipo=$db->fetchColumn();
+            }
+            $cliente->NumContacto=$numContactos;
+            $query="SELECT *
+                    FROM Direccion
+                    WHERE id_DireccionPropietario=:id";
+            $db->query($query);
+            $db->bParam(':id',$id);
+            $cliente->Direccion=$db->getRegistros();
+
+            $db->commit();
+        } catch (Throwable $th) {
+            $resp['status']=false;
+            $db->rollback();
+        }
+        return $cliente;
+    }
 }

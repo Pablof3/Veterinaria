@@ -29,6 +29,11 @@ class Servicio extends Controller
     {
         $this->mServicio->Eliminar(1);
     }
+
+    public function vRegistrar()
+    {
+        $this->vista('Servicio/vRegistrar');
+    }
 }
 
 ?>

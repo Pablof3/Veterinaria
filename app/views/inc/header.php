@@ -195,7 +195,7 @@
                     <li class="active">
                         <a href="#dashboard">
                             <i class="iconsmind-Shop-4"></i>
-                            <span>Dashboards</span>
+                            <span>Cliente</span>
                         </a>
                     </li>
                     <li>
@@ -231,23 +231,13 @@
             <div class="scroll">
                 <ul class="list-unstyled" data-link="dashboard">
                     <li class="active">
-                        <a href="Dashboard.Default.html">
-                            <i class="simple-icon-rocket"></i> Default
+                        <a href="<?= RUTA_URL?>/Cliente/vRegistrar">
+                            <i class="simple-icon-rocket"></i> Registrar
                         </a>
                     </li>
                     <li>
                         <a href="Dashboard.Analytics.html">
-                            <i class="simple-icon-pie-chart"></i>Analytics
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Dashboard.Ecommerce.html">
-                            <i class="simple-icon-basket-loaded"></i> Ecommerce
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Dashboard.Content.html">
-                            <i class="simple-icon-doc"></i> Content
+                            <i class="simple-icon-pie-chart"></i>Lista
                         </a>
                     </li>
                 </ul>
